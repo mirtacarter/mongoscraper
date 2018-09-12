@@ -24,7 +24,7 @@ app.use(express.static("public"));
 
 // -------------------------------------------------------------------------------------------
 // Connection
-var PORT = 3001;
+var PORT = process.env.PORT || 3001;
 // Connect to the Mongo DB
 mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
